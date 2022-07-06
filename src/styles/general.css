@@ -14,6 +14,8 @@
   flex-wrap: wrap;
   display: flex;
   min-height: 100%;
+  padding: 4px 5px 6px 5px;
+
 }
 
 .price-slider {
@@ -27,19 +29,39 @@
   border-radius: 5px;
   display: flex;
   flex-direction: column;
-  height: 250px;
+  height: 300px;
   margin: 40px;
   width: 250px;
-  
+}
+
+.product-item:hover {
+  background-color: grey;
+}
+.product-item:active {
+  background-color: grey;
 }
 
 .product-item img {
+  margin-top: 10px;
+  margin-left: 34%;
   max-width: 30%;
 }
 
-.product-item p {
+.product-item  p {
   align-items: center;
   justify-content: space-evenly;
   padding: 2px 3px 4px 3px;
+  margin-left: 10px;
+}
 
+.box {
+  margin-top: 20px;
+}
+
+#price {
+  text-decoration: line-through;
+}
+
+a {
+  text-decoration: none;
 }
