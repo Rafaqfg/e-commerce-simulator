@@ -9,8 +9,6 @@ function MyProvider({ children }) {
     max: 10000,
   });
  
-
-
   const ContextObject = {
     productsList,
     setProductsList,
