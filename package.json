@@ -2,7 +2,7 @@
   "name": "ecommerce",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://rafaqfg.github.io/e-commerce-simulato/",
+  "homepage": "https://rafaqfg.github.io/e-commerce-simulator/",
   "dependencies": {
     "@material-ui/core": "^4.12.4",
     "@testing-library/jest-dom": "^5.16.4",
@@ -23,8 +23,7 @@
     "eject": "react-scripts eject",
     "deploy": "npm run build && ./node_modules/.bin/gh-pages -d build"
   },
-  "eslintConfig": {
-  },
+  "eslintConfig": {},
   "browserslist": {
     "production": [
       ">0.2%",
@@ -36,5 +35,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }
