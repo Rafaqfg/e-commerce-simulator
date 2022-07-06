@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import SalePrice from './SalePrice';
 
 const addToCart = () => {
   window.alert('Great choice! Added to your cart!');
@@ -17,17 +18,23 @@ class ProductCard extends Component {
       <li
         className="product-item"
       >
-        <img
-          src={ productImg }
-          alt={ productTitle }
-        />
-        <p>{ productTitle }</p>
-        <p>{`R$ ${productPrice}`}</p>
+        <a
+          href="https://rafaqfg.github.io/portfolio/"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <img
+            src={ productImg }
+            alt={ productTitle }
+          />
+          <p>{ productTitle }</p>
+        </a>
+        <p id={ freeShipping ? "price" : "" }
+        >
+          {`$ ${productPrice}`}
+        </p>
 
-        { freeShipping
-              && (<span>Frete Grátis</span>)}
-
-       
+        { freeShipping && <SalePrice productPrice={ productPrice } /> }
         <button
           type="button"
           onClick={ () => addToCart() }

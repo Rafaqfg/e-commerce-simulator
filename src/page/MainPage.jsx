@@ -7,6 +7,7 @@ import '../styles/general.css';
 function MainPage() {
 
   const { productsList, setProductsList } = useContext(MyContext);
+  const { range } = useContext(MyContext);
 
   useEffect( () => {
     const getProducts = async () => {
@@ -19,13 +20,17 @@ function MainPage() {
   return (
     <div className="home-container">
       <ul className="product-container">
-        {productsList.map((item) => (
-          <ProductCard
-            key={ item.id }
-            productDetails={ item }
-          />
-
-        ))}
+        {
+          productsList.filter((product) => range.min < parseFloat(product.price)
+            && parseFloat(product.price) < range.max)
+              .map((item) => (
+                
+                <ProductCard
+                  key={ item.id }
+                  productDetails={ item }
+                />
+              ))
+        }
       </ul>
     </div>
   )
