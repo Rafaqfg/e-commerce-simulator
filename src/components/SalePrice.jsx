@@ -7,7 +7,8 @@ function SalePrice (props) {
   const superSale = {
     discount: 10 * (Math.floor((Math.random() * 5) + 1)),
     discountGenerator: (productPrice) => {
-      return parseFloat((productPrice/100) * superSale.discount).toFixed(2);
+      const percent = (productPrice/100) * superSale.discount;
+      return parseFloat(productPrice - percent).toFixed(2);
     },
   };
 
